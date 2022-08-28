@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -18,6 +19,8 @@ public class CardDeliveryOrderTest {
     @BeforeEach
     public void setup(){
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
 //        Configuration.headless = true;
         open("http://localhost:9999");
 
